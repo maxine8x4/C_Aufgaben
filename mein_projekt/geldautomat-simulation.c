@@ -3,7 +3,7 @@
 int main () {
     
     int kontostand = 1000;
-    int abhebungsbetrag = 1000;
+    int abhebungsbetrag;
     int tageslimit = 500;
 
     printf("Welchen Betrag wollen Sie abheben?");

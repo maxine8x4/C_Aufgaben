@@ -3,7 +3,7 @@
 int main () {
     
     int geheimeZahl = 9;
-    int eingabeZahl = 9;
+    int eingabeZahl;
 
     printf("Bitte eine Zahl eingeben:");
     scanf("%d", &eingabeZahl);
@@ -17,9 +17,7 @@ int main () {
             else if (eingabeZahl < geheimeZahl) {
                 printf("die zahl ist zu klein");
             }
-                    else {
-                        printf("fehler");
-                    }
+                  
     
-    return 0
+    return 0;
 }
