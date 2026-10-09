@@ -28,30 +28,57 @@ int main () {
 
     scanf("%d", &befehl);
 
-    if (befehl == 1) {
-        printf("Der Roboter blinkt ");
-    }
-    else if (befehl == 2) {
-        printf("Der Roboter dreht sich ");
-    }
-    else if (befehl == 3) {
-        printf("Der Roboter piept ");
-    }
+    switch (zustand) {
+        case 1: 
+            switch (befehl) {
+                case 1: 
+                    printf("Der Roboter blinkt glücklich\n");
+                    break;
+                case 2: 
+                    printf("Der Roboter dreht sich glücklich \n");
+                    break;
+                case 3:
+                    printf("Der Roboter piept glücklich \n");
+                    break;
+            }
+            break;
 
-    if (zustand == 1) {
-        printf("glücklich!\n");
-    }
-    else if(zustand == 2) {
-        printf ("traurig..\n");
-    }
-    else if (zustand == 3) {
-        printf("müde\n");
-    }
-    else if (zustand == 4) {
-        printf ("verwirrt\n");
-    }
-   
+        case 2:
+            switch (befehl) {
+                case 1:
+                case 2:
+                    printf("Der Roboter blinkt schwach \n");
+                    break;
+                case 3:
+                    printf("Der Roboter piept leise \n");
+                    break;
+            }
+            break;
 
+        case 3: 
+            switch (befehl) {
+                case 1:
+                case 2:
+                case 3:
+                    printf("Der Roboter schläft \n");
+                    break;
+            }
+            break;
+
+        case 4:
+            switch (befehl) {
+                case 1:
+                case 2:
+                case 3:
+                    printf("Der Roboter fängt an sich zu drehen, piept einmal laut und blinkt dann wild wie eine Discokugel \n");
+                    break;
+            }
+            break;
+
+        default: 
+            printf("Fehler\n");
+            break;
+    }
 
     return 0;
 }
