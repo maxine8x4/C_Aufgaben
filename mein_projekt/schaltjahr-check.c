@@ -8,15 +8,10 @@ int main () {
 
     scanf("%d", &jahr);
 
-    if (jahr % 400 == 0) {
+    if (jahr % 400 == 0 || jahr % 4 == 0 && jahr % 100 !=0) {
         printf("%d", jahr);
         printf(" ist ein Schaltjahr \n" );
-    }
-    else if (jahr % 4 == 0 && jahr % 100 !=0) {
-        printf("%d", jahr);
-        printf(" ist ein Schaltjahr \n ");
-    }
-    else {
+    } else {
         printf("%d", jahr);
         printf(" ist kein Schaltjahr \n ");
     }

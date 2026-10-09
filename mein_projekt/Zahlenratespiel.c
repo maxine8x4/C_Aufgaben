@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main () {
     
@@ -6,18 +7,16 @@ int main () {
     int eingabeZahl;
 
     printf("Bitte eine Zahl eingeben:");
-    scanf("%d", &eingabeZahl);
-
-    if (eingabeZahl == geheimeZahl) {
-        printf("richtig");
+    if (scanf("%d", &eingabeZahl) !=1) {
+        printf("Ungültige Eingabe");
+        return EXIT_FAILURE;
     }
-        else if (eingabeZahl > geheimeZahl) {
-            printf("die zahl ist zu groß");
-        }
-            else if (eingabeZahl < geheimeZahl) {
-                printf("die zahl ist zu klein");
-            }
-                  
-    
-    return 0;
+    if (eingabeZahl == geheimeZahl) {
+        printf("richtig\n");
+    } else if (eingabeZahl > geheimeZahl) {
+        printf("die zahl ist zu groß\n");
+    } else if (eingabeZahl < geheimeZahl) {
+        printf("die zahl ist zu klein");
+    }
+    return  EXIT_SUCCESS;
 }
